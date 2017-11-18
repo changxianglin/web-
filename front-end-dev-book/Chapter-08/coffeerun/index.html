@@ -3,9 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>coffeerun</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="container">
+    <header>
+      <h1>CoffeeRun</h1>
+    </header>
+    <section>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <form data-coffee-order = 'form'>
+            <div class="form-group">
+              <label for = "coffeeOrder">Coffee Order</label>
+              <input class="form-control" name='coffee' id = "coffeeOrder" autofocus>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
     <script src = "scripts/datastore.js"></script>
     <script src = "scripts/truck.js"></script>
+    <script src = "scripts/main.js"></script>
   </body>
 </html>
