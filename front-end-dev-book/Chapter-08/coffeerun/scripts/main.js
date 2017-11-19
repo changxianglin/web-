@@ -8,10 +8,11 @@
   var DataStore = App.DataStore
   var FormHandler = App.FormHandler
   var CheckList = App.CheckList
-  
+
   var myTruck = new Truck('ncc-1701', new DataStore())
   window.myTruck = myTruck
   var checkList = new CheckList(CHECKLIST_SELECTOR)
+  checkList.addClickHandler(myTruck.deliveOrder.bind(myTruck))
   var formhandler = new FormHandler(FORM_SELECTOR)
 
 
