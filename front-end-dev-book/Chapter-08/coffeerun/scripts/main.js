@@ -7,6 +7,7 @@
   var Truck = App.Truck
   var DataStore = App.DataStore
   var FormHandler = App.FormHandler
+  var Validation = App.Validation
   var CheckList = App.CheckList
 
   var myTruck = new Truck('ncc-1701', new DataStore())
@@ -20,5 +21,8 @@
     myTruck.createOrder.call(myTruck, data)
     checkList.addRow.call(checkList, data)
   })
+
+  formhandler.addInputHandler(Validation.isCompanyEmail)
+
   console.log(formhandler)
 })(window)
